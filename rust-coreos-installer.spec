@@ -5,7 +5,8 @@
 # The library is for internal code reuse and is not a public API
 %global __cargo_is_lib 0
 
-%global dracutcommit 9332fe55e1439abc88a4362248533437f7e767c3
+#%global dracutcommit 9332fe55e1439abc88a4362248533437f7e767c3
+%global dracutcommit 8f712d620d38001fc2b6cd5029d3efeb17f6638a
 %global dracutshortcommit %(c=%{dracutcommit}; echo ${c:0:7})
 
 %global crate coreos-installer
@@ -18,7 +19,7 @@ Summary:        Installer for Fedora CoreOS and RHEL CoreOS
 # Upstream license specification: Apache-2.0
 License:        ASL 2.0
 URL:            https://crates.io/crates/coreos-installer
-Source0:        https://crates.io/api/v1/crates/%{crate}/%{version}/download#/%{crate}-%{version}.crate
+Source0:        https://crates.io/api/v1/crates/%{crate}/%{version}/download #/%{crate}-%{version}.crate
 # not used on Fedora
 Source1:        https://github.com/coreos/%{crate}/releases/download/v%{version}/%{crate}-%{version}-vendor.tar.gz
 Source2:        https://github.com/7flying/coreos-installer-dracut/archive/refs/heads/default-lvm.zip
