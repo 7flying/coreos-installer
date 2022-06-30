@@ -22,7 +22,7 @@ URL:            https://crates.io/crates/coreos-installer
 Source0:        https://crates.io/api/v1/crates/%{crate}/%{version}/download #/%{crate}-%{version}.crate
 # not used on Fedora
 Source1:        https://github.com/coreos/%{crate}/releases/download/v%{version}/%{crate}-%{version}-vendor.tar.gz
-Source2:        https://github.com/7flying/coreos-installer-dracut/archive/refs/heads/default-lvm.zip
+Source2:        https://github.com/7flying/coreos-installer-dracut/archive/%{dracutcommit}/coreos-installer-dracut-%{dracutshortcommit}.tar.gz
 
 #https://github.com/7flying/coreos-installer-dracut/archive/%{dracutcommit}/coreos-installer-dracut-%{dracutshortcommit}.tar.gz
 #https://github.com/7flying/coreos-installer-dracut/archive/refs/heads/default-lvm.zip
