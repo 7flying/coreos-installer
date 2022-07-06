@@ -1,6 +1,6 @@
 .PHONY: srpm
 srpm:
-	dnf install -y git rust-packaging rpm-build rpmdevtools
+	dnf install --nogpgcheck -y git rust-packaging rpm-build rpmdevtools
 	# similar to https://github.com/actions/checkout/issues/760, but for COPR
 	git config --global --add safe.directory '*'
 	# curl -LOf https://src.fedoraproject.org/rpms/rust-coreos-installer/raw/rawhide/f/rust-coreos-installer.spec
@@ -12,5 +12,5 @@ srpm:
 	sed -ie 's/^Source1/# Source1/g' rust-coreos-installer.spec  # we don't vendor
 	# we already have the specfile, so comment it
 	spectool -g -s 2 rust-coreos-installer.spec  # fetch coreos-installer-dracut just to satisfy rpmbuild
-	rpmbuild -bs --define "_sourcedir ${PWD}" --define "_specdir ${PWD}" --define "_builddir ${PWD}" --define "_srcrpmdir ${PWD}" --define "_rpmdir ${PWD}" --define "_buildrootdir ${PWD}/.build" rust-coreos-installer.spec
+	rpmbuild -bb --define "_sourcedir ${PWD}" --define "_specdir ${PWD}" --define "_builddir ${PWD}" --define "_srcrpmdir ${PWD}" --define "_rpmdir ${PWD}" --define "_buildrootdir ${PWD}/.build" rust-coreos-installer-gitlab.spec
 	mv *.src.rpm $$outdir
