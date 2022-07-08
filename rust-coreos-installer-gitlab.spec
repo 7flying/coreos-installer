@@ -12,8 +12,8 @@
 %global crate coreos-installer
 
 Name:           rust-%{crate}
-Version:        0.11.1
-Release:        4%{?dist}
+Version:        0.11.0
+Release:        5%{?dist}
 Summary:        Installer for Fedora CoreOS and RHEL CoreOS
 
 # Upstream license specification: Apache-2.0
