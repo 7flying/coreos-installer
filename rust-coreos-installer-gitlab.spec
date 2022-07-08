@@ -6,7 +6,7 @@
 %global __cargo_is_lib 0
 
 #%global dracutcommit 1a262bd9553ee0b3607b4d1982947a1fd6567c35
-%global dracutcommit 8f712d620d38001fc2b6cd5029d3efeb17f6638a
+%global dracutcommit c08a51dcfed7c5abbea742e8095aa4133aea22ed
 %global dracutshortcommit %(c=%{dracutcommit}; echo ${c:0:7})
 
 %global crate coreos-installer
