@@ -23,7 +23,7 @@ License:        ASL 2.0
 URL:            https://crates.io/crates/coreos-installer
 Source0:        https://crates.io/api/v1/crates/%{crate}/%{version}/download#/%{crate}-%{version}.crate
 # not used on Fedora
-Source1:        https://github.com/coreos/%{crate}/releases/download/v%{version}/%{crate}-%{version}-vendor.tar.gz
+#Source1:        https://github.com/coreos/%{crate}/releases/download/v%{version}/%{crate}-%{version}-vendor.tar.gz
 Source2: https://github.com/7flying/coreos-installer-dracut/archive/%{dracutcommit}/coreos-installer-dracut-%{dracutshortcommit}.tar.gz
 #Source2: https://github.com/coreos/coreos-installer-dracut/archive/%{dracutcommit}/coreos-installer-dracut-%{dracutshortcommit}.tar.gz
 
@@ -44,7 +44,7 @@ BuildRequires:  xz-devel
 %else
 BuildRequires:  rust-packaging
 %endif
-#BuildRequires:  systemd-rpm-macros
+BuildRequires:  systemd-rpm-macros
 # For tests
 BuildRequires:  gnupg2
 
