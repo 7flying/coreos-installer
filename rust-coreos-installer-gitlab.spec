@@ -44,7 +44,7 @@ BuildRequires:  xz-devel
 %else
 BuildRequires:  rust-packaging
 %endif
-BuildRequires:  systemd-rpm-macros
+#BuildRequires:  systemd-rpm-macros
 # For tests
 BuildRequires:  gnupg2
 
