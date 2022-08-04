@@ -8,7 +8,6 @@
 # This commit will be the one that marks the code that will be
 # available as an PRM, source (on main): 7flying/coreos/coreos-installer-dracut
 %global dracutcommit f3705d383fc570c8dcaf9ccd6b0285df6013f394
-#%global dracutcommit 89d5789ef30ee35c7d083f425c7a083459989dbd
 %global dracutshortcommit %(c=%{dracutcommit}; echo ${c:0:7})
 
 %global crate coreos-installer
